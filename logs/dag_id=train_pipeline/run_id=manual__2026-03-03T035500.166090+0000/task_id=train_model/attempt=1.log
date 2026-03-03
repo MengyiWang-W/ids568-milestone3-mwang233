@@ -1,0 +1,106 @@
+{"timestamp":"2026-03-03T03:55:09.211709Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-03T03:55:09.215749Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/train_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-03T03:55:10.587742Z","level":"info","event":"Training with C = 1.0","logger":"task.stdout"}
+{"timestamp":"2026-03-03T03:59:21.233209Z","level":"info","event":"Training with C = 1.0","logger":"task.stdout"}
+{"timestamp":"2026-03-03T03:59:21.299909Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.459160Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py\", line 204, in _new_conn","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.507327Z","level":"error","event":"    sock = connection.create_connection(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.540455Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.556626Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py\", line 85, in create_connection","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.574680Z","level":"error","event":"    raise err","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.590590Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/connection.py\", line 73, in create_connection","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.604857Z","level":"error","event":"    sock.connect(sa)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.639730Z","level":"error","event":"ConnectionRefusedError: [Errno 111] Connection refused","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.655380Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.717049Z","level":"error","event":"The above exception was the direct cause of the following exception:","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.784048Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.829793Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.877181Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 787, in urlopen","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.893804Z","level":"error","event":"    response = self._make_request(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.927450Z","level":"error","event":"               ^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:21.961599Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 493, in _make_request","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.007500Z","level":"error","event":"    conn.request(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.041133Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py\", line 500, in request","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.088251Z","level":"error","event":"    self.endheaders()","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.137135Z","level":"error","event":"  File \"/usr/python/lib/python3.12/http/client.py\", line 1333, in endheaders","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.273624Z","level":"error","event":"    self._send_output(message_body, encode_chunked=encode_chunked)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.322355Z","level":"error","event":"  File \"/usr/python/lib/python3.12/http/client.py\", line 1093, in _send_output","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.351326Z","level":"error","event":"    self.send(msg)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.383078Z","level":"error","event":"  File \"/usr/python/lib/python3.12/http/client.py\", line 1037, in send","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.402213Z","level":"error","event":"    self.connect()","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.429093Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py\", line 331, in connect","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.444486Z","level":"error","event":"    self.sock = self._new_conn()","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.467903Z","level":"error","event":"                ^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.520519Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py\", line 219, in _new_conn","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.540116Z","level":"error","event":"    raise NewConnectionError(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.650635Z","level":"error","event":"urllib3.exceptions.NewConnectionError: HTTPConnection(host='mlflow', port=5000): Failed to establish a new connection: [Errno 111] Connection refused","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.665648Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.697650Z","level":"error","event":"The above exception was the direct cause of the following exception:","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.716823Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.732146Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.777717Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py\", line 644, in send","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.807903Z","level":"error","event":"    resp = conn.urlopen(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.826026Z","level":"error","event":"           ^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.827397Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 871, in urlopen","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.835116Z","level":"error","event":"    return self.urlopen(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.836336Z","level":"error","event":"           ^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.859000Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 871, in urlopen","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.877497Z","level":"error","event":"    return self.urlopen(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.891044Z","level":"error","event":"           ^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.907346Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 871, in urlopen","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.922434Z","level":"error","event":"    return self.urlopen(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.956249Z","level":"error","event":"           ^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:22.974815Z","level":"error","event":"  [Previous line repeated 4 more times]","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.038739Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 841, in urlopen","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.070481Z","level":"error","event":"    retries = retries.increment(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.103724Z","level":"error","event":"              ^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.180497Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/urllib3/util/retry.py\", line 535, in increment","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.228327Z","level":"error","event":"    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.276819Z","level":"error","event":"    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.341319Z","level":"error","event":"urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=milestone3 (Caused by NewConnectionError(\"HTTPConnection(host='mlflow', port=5000): Failed to establish a new connection: [Errno 111] Connection refused\"))","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.534353Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.598262Z","level":"error","event":"During handling of the above exception, another exception occurred:","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.661848Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.726860Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.762291Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py\", line 258, in http_request","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.839690Z","level":"error","event":"    return _get_http_response_with_retries(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.870816Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.886750Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/request_utils.py\", line 237, in _get_http_response_with_retries","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.902796Z","level":"error","event":"    return session.request(method, url, allow_redirects=allow_redirects, **kwargs)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.934737Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.953164Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py\", line 589, in request","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:23.982962Z","level":"error","event":"    resp = self.send(prep, **send_kwargs)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.031633Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.064015Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py\", line 703, in send","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.079429Z","level":"error","event":"    r = adapter.send(request, **kwargs)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.176035Z","level":"error","event":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.191045Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py\", line 677, in send","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.193056Z","level":"error","event":"    raise ConnectionError(e, request=request)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.194115Z","level":"error","event":"requests.exceptions.ConnectionError: HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=milestone3 (Caused by NewConnectionError(\"HTTPConnection(host='mlflow', port=5000): Failed to establish a new connection: [Errno 111] Connection refused\"))","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.206969Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.223010Z","level":"error","event":"During handling of the above exception, another exception occurred:","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.239156Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.255729Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.287587Z","level":"error","event":"  File \"/opt/airflow/dags/train.py\", line 35, in <module>","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.303683Z","level":"error","event":"    main()","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.320021Z","level":"error","event":"  File \"/opt/airflow/dags/train.py\", line 15, in main","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.589603Z","level":"error","event":"    mlflow.set_experiment(\"milestone3\")","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.623397Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/fluent.py\", line 194, in set_experiment","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.640025Z","level":"error","event":"    experiment = client.get_experiment_by_name(experiment_name)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.655750Z","level":"error","event":"                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.672077Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py\", line 283, in get_experiment_by_name","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.691971Z","level":"error","event":"    return self.store.get_experiment_by_name(name)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.733235Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.740094Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py\", line 965, in get_experiment_by_name","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.766102Z","level":"error","event":"    response_proto = self._call_endpoint(GetExperimentByName, req_body)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.771613Z","level":"error","event":"                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.785775Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py\", line 233, in _call_endpoint","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.789547Z","level":"error","event":"    return call_endpoint(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.808774Z","level":"error","event":"           ^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.819764Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py\", line 622, in call_endpoint","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.823836Z","level":"error","event":"    response = http_request(**call_kwargs)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.824956Z","level":"error","event":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.831947Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py\", line 281, in http_request","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.834310Z","level":"error","event":"    raise MlflowException(f\"API request to {url} failed with exception {e}\")","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:24.840062Z","level":"error","event":"mlflow.exceptions.MlflowException: API request to http://mlflow:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=milestone3 (Caused by NewConnectionError(\"HTTPConnection(host='mlflow', port=5000): Failed to establish a new connection: [Errno 111] Connection refused\"))","logger":"task.stderr"}
+{"timestamp":"2026-03-03T03:59:26.771890Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1142,"error_detail":[{"exc_type":"CalledProcessError","exc_value":"Command '['python', '/opt/airflow/dags/train.py', '1.0']' returned non-zero exit status 1.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1068,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1477,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":228,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":251,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/train_pipeline.py","lineno":43,"name":"train_model"},{"filename":"/usr/python/lib/python3.12/subprocess.py","lineno":571,"name":"run"}],"is_group":false,"exceptions":[]}]}

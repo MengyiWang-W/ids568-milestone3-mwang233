@@ -1,0 +1,7 @@
+artifact_location: file:///opt/airflow/mlruns/433230427020427543
+creation_time: 1772507684078
+experiment_id: '433230427020427543'
+last_update_time: 1772507684078
+lifecycle_stage: active
+name: milestone3
+workspace: default

@@ -1,0 +1,11 @@
+{"timestamp":"2026-03-03T06:51:30.351727Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-03T06:51:30.359921Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/train_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-03T06:51:31.832112Z","level":"warning","event":"pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py","lineno":20,"logger":"py.warnings"}
+{"timestamp":"2026-03-03T06:51:31.911006Z","level":"info","event":"Training with C = 1.0","logger":"task.stdout"}
+{"timestamp":"2026-03-03T06:51:33.510593Z","level":"error","event":"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/requirements_utils.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.","logger":"task.stderr"}
+{"timestamp":"2026-03-03T06:51:33.511105Z","level":"error","event":"  import pkg_resources  # noqa: TID251","logger":"task.stderr"}
+{"timestamp":"2026-03-03T06:51:44.319595Z","level":"info","event":"Training with C = 1.0","logger":"task.stdout"}
+{"timestamp":"2026-03-03T06:51:44.323420Z","level":"info","event":"Tracking URI: http://mlflow:5000","logger":"task.stdout"}
+{"timestamp":"2026-03-03T06:51:44.324023Z","level":"info","event":"Training finished","logger":"task.stdout"}
+{"timestamp":"2026-03-03T06:51:44.324548Z","level":"info","event":"Accuracy: 0.6","logger":"task.stdout"}
+{"timestamp":"2026-03-03T06:51:45.255345Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

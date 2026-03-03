@@ -1,0 +1,49 @@
+{"timestamp":"2026-03-03T05:34:06.626976Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-03T05:34:06.630228Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/train_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-03T05:34:07.903050Z","level":"info","event":"Training with C = 1.0","logger":"task.stdout"}
+{"timestamp":"2026-03-03T05:34:14.393899Z","level":"error","event":"2026/03/03 05:34:14 INFO mlflow.tracking.fluent: Experiment with name 'milestone3' does not exist. Creating a new experiment.","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.986568Z","level":"info","event":"Training with C = 1.0","logger":"task.stdout"}
+{"timestamp":"2026-03-03T05:34:15.987260Z","level":"info","event":"Tracking URI: http://mlflow:5000","logger":"task.stdout"}
+{"timestamp":"2026-03-03T05:34:15.987805Z","level":"info","event":"🏃 View run respected-calf-185 at: http://mlflow:5000/#/experiments/1/runs/ad11afed39484d35b4a0424b12edd28d","logger":"task.stdout"}
+{"timestamp":"2026-03-03T05:34:15.988233Z","level":"info","event":"🧪 View experiment at: http://mlflow:5000/#/experiments/1","logger":"task.stdout"}
+{"timestamp":"2026-03-03T05:34:15.988634Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.989117Z","level":"error","event":"  File \"/opt/airflow/dags/train.py\", line 46, in <module>","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.990327Z","level":"error","event":"    main()","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.990901Z","level":"error","event":"  File \"/opt/airflow/dags/train.py\", line 39, in main","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.993596Z","level":"error","event":"    mlflow.sklearn.log_model(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.994152Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/sklearn/__init__.py\", line 477, in log_model","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.994679Z","level":"error","event":"    return Model.log(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.995130Z","level":"error","event":"           ^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.995571Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/models/model.py\", line 1161, in log","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.996099Z","level":"error","event":"    model = _create_logged_model(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.996512Z","level":"error","event":"            ^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.996939Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/fluent.py\", line 2442, in _create_logged_model","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.997414Z","level":"error","event":"    return MlflowClient()._create_logged_model(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.997768Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.998124Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/client.py\", line 5778, in _create_logged_model","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.998456Z","level":"error","event":"    return self._tracking_client.create_logged_model(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.998837Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.999282Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/telemetry/track.py\", line 30, in wrapper","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:15.999789Z","level":"error","event":"    result = func(*args, **kwargs)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.000144Z","level":"error","event":"             ^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.000584Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py\", line 879, in create_logged_model","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.000982Z","level":"error","event":"    return self.store.create_logged_model(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.001412Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.001845Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py\", line 1032, in create_logged_model","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.002380Z","level":"error","event":"    response_proto = self._call_endpoint(CreateLoggedModel, req_body)","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.002789Z","level":"error","event":"                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.003164Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py\", line 233, in _call_endpoint","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.003621Z","level":"error","event":"    return call_endpoint(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.004058Z","level":"error","event":"           ^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.004511Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py\", line 627, in call_endpoint","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.004945Z","level":"error","event":"    response = verify_rest_response(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.005416Z","level":"error","event":"               ^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.005853Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py\", line 348, in verify_rest_response","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.006233Z","level":"error","event":"    raise MlflowException(","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.006600Z","level":"error","event":"mlflow.exceptions.MlflowException: API request to endpoint /api/2.0/mlflow/logged-models failed with error code 404 != 200. Response body: '<!doctype html>","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.007040Z","level":"error","event":"<html lang=en>","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.007444Z","level":"error","event":"<title>404 Not Found</title>","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.007863Z","level":"error","event":"<h1>Not Found</h1>","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.008301Z","level":"error","event":"<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.008790Z","level":"error","event":"'","logger":"task.stderr"}
+{"timestamp":"2026-03-03T05:34:16.501818Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1142,"error_detail":[{"exc_type":"CalledProcessError","exc_value":"Command '['python', '/opt/airflow/dags/train.py', '1.0']' returned non-zero exit status 1.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1068,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1477,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":228,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":251,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/train_pipeline.py","lineno":40,"name":"train_model"},{"filename":"/usr/python/lib/python3.12/subprocess.py","lineno":571,"name":"run"}],"is_group":false,"exceptions":[]}]}

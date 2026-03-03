@@ -1,0 +1,108 @@
+{"timestamp":"2026-03-02T23:45:19.520128Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-02T23:45:19.522788Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/train_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-02T23:45:21.079244Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/train_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2026-03-02T23:45:27.699724Z","level":"error","event":"2026/03/02 23:45:27 INFO mlflow.store.db.utils: Creating initial MLflow database tables...","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.701729Z","level":"error","event":"2026/03/02 23:45:27 INFO mlflow.store.db.utils: Updating database tables","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.795956Z","level":"info","event":"Training with C = 1.0","logger":"task.stdout"}
+{"timestamp":"2026-03-02T23:45:27.796881Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.797522Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py\", line 1967, in _exec_single_context","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.797998Z","level":"error","event":"    self.dialect.do_execute(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.798383Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py\", line 952, in do_execute","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.798925Z","level":"error","event":"    cursor.execute(statement, parameters)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.799556Z","level":"error","event":"sqlite3.OperationalError: duplicate column name: step","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.800255Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.800683Z","level":"error","event":"The above exception was the direct cause of the following exception:","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.801111Z","level":"error","event":"","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.801574Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.802063Z","level":"error","event":"  File \"/opt/airflow/dags/train.py\", line 34, in <module>","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.802707Z","level":"error","event":"    main()","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.803250Z","level":"error","event":"  File \"/opt/airflow/dags/train.py\", line 14, in main","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.805614Z","level":"error","event":"    mlflow.set_experiment(\"milestone3\")","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.806425Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/fluent.py\", line 190, in set_experiment","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.807234Z","level":"error","event":"    client = TrackingServiceClient(_resolve_tracking_uri())","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.807685Z","level":"error","event":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.808131Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py\", line 99, in __init__","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.808678Z","level":"error","event":"    self.store","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.809082Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py\", line 103, in store","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.809548Z","level":"error","event":"    return utils._get_store(self.tracking_uri)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.809946Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.810321Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/utils.py\", line 270, in _get_store","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.810671Z","level":"error","event":"    return _tracking_store_registry.get_store(store_uri, artifact_uri)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.810990Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.811350Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py\", line 45, in get_store","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.811669Z","level":"error","event":"    return self._get_store_with_resolved_uri(resolved_store_uri, artifact_uri)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.812091Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.812559Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/registry.py\", line 56, in _get_store_with_resolved_uri","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.812856Z","level":"error","event":"    return builder(store_uri=resolved_store_uri, artifact_uri=artifact_uri)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.813223Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.813671Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/utils.py\", line 201, in _get_sqlalchemy_store","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.814023Z","level":"error","event":"    return store_cls(store_uri, artifact_uri)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.814464Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.814855Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py\", line 299, in __init__","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.815412Z","level":"error","event":"    mlflow.store.db.utils._initialize_tables(self.engine)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.815817Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/db/utils.py\", line 121, in _initialize_tables","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.816276Z","level":"error","event":"    _upgrade_db(engine)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.816701Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/db/utils.py\", line 289, in _upgrade_db","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.817055Z","level":"error","event":"    command.upgrade(config, \"heads\")","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.817457Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/command.py\", line 483, in upgrade","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.817797Z","level":"error","event":"    script.run_env()","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.818224Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/script/base.py\", line 545, in run_env","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.818717Z","level":"error","event":"    util.load_python_file(self.dir, \"env.py\")","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.819239Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/util/pyfiles.py\", line 116, in load_python_file","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.819593Z","level":"error","event":"    module = load_module_py(module_id, path)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.820000Z","level":"error","event":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.820435Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/util/pyfiles.py\", line 136, in load_module_py","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.820877Z","level":"error","event":"    spec.loader.exec_module(module)  # type: ignore","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.821375Z","level":"error","event":"    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.821801Z","level":"error","event":"  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.822188Z","level":"error","event":"  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.822643Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/db_migrations/env.py\", line 78, in <module>","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.822982Z","level":"error","event":"    run_migrations_online()","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.823312Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/db_migrations/env.py\", line 72, in run_migrations_online","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.823654Z","level":"error","event":"    context.run_migrations()","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.824007Z","level":"error","event":"  File \"<string>\", line 8, in run_migrations","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.824316Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/runtime/environment.py\", line 969, in run_migrations","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.824711Z","level":"error","event":"    self.get_context().run_migrations(**kw)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.825110Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/runtime/migration.py\", line 626, in run_migrations","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.825467Z","level":"error","event":"    step.migration_fn(**kw)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.825889Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/mlflow/store/db_migrations/versions/451aebb31d03_add_metric_step.py\", line 18, in upgrade","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.826259Z","level":"error","event":"    op.add_column(\"metrics\", sa.Column(\"step\", sa.BigInteger(), nullable=False, server_default=\"0\"))","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.826629Z","level":"error","event":"  File \"<string>\", line 8, in add_column","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.826989Z","level":"error","event":"  File \"<string>\", line 3, in add_column","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.827369Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/operations/ops.py\", line 2210, in add_column","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.827783Z","level":"error","event":"    return operations.invoke(op)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.828181Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.828582Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/operations/base.py\", line 452, in invoke","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.828967Z","level":"error","event":"    return fn(self, operation)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.829326Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.829694Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/operations/toimpl.py\", line 181, in add_column","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.830131Z","level":"error","event":"    operations.impl.add_column(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.830443Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/ddl/impl.py\", line 391, in add_column","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.830726Z","level":"error","event":"    self._exec(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.831009Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/alembic/ddl/impl.py\", line 256, in _exec","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.831283Z","level":"error","event":"    return conn.execute(construct, params)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.831606Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.831993Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py\", line 1419, in execute","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.832389Z","level":"error","event":"    return meth(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.832816Z","level":"error","event":"           ^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.833566Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/ddl.py\", line 187, in _execute_on_connection","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.834045Z","level":"error","event":"    return connection._execute_ddl(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.834488Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.834906Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py\", line 1530, in _execute_ddl","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.835296Z","level":"error","event":"    ret = self._execute_context(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.835744Z","level":"error","event":"          ^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.836097Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py\", line 1846, in _execute_context","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.836467Z","level":"error","event":"    return self._exec_single_context(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.836807Z","level":"error","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.837121Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py\", line 1986, in _exec_single_context","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.837436Z","level":"error","event":"    self._handle_dbapi_exception(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.837952Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py\", line 2363, in _handle_dbapi_exception","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.838339Z","level":"error","event":"    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.838765Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py\", line 1967, in _exec_single_context","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.839170Z","level":"error","event":"    self.dialect.do_execute(","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.839552Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py\", line 952, in do_execute","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.839828Z","level":"error","event":"    cursor.execute(statement, parameters)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.840133Z","level":"error","event":"sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) duplicate column name: step","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.840412Z","level":"error","event":"[SQL: ALTER TABLE metrics ADD COLUMN step BIGINT DEFAULT '0' NOT NULL]","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:27.840700Z","level":"error","event":"(Background on this error at: https://sqlalche.me/e/20/e3q8)","logger":"task.stderr"}
+{"timestamp":"2026-03-02T23:45:28.316529Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1142,"error_detail":[{"exc_type":"CalledProcessError","exc_value":"Command '['python', '/opt/airflow/dags/train.py']' returned non-zero exit status 1.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1068,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1477,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":417,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":228,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/python.py","lineno":251,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":82,"name":"run"},{"filename":"/opt/airflow/dags/train_pipeline.py","lineno":23,"name":"train_model"},{"filename":"/usr/python/lib/python3.12/subprocess.py","lineno":571,"name":"run"}],"is_group":false,"exceptions":[]}]}
