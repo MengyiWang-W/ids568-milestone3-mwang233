@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Airflow
+airflow_home/
+logs/
+
+# VSCode
+.vscode/
+
+# System
+.DS_Store
