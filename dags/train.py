@@ -30,7 +30,7 @@ def main():
         print("Tracking URI:", mlflow.get_tracking_uri())
         wait_for_mlflow(tracking_uri)
     else:
-    mlflow.set_tracking_uri(tracking_uri)
+        mlflow.set_tracking_uri(tracking_uri)
     
     experiment_name = "milestone3"
     experiment = mlflow.get_experiment_by_name(experiment_name)
